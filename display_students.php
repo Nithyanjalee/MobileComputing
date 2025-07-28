@@ -9,7 +9,7 @@ if (!$connect) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT StudentID, FirstName, LastName, Height FROM student";
+$sql = "SELECT StudentID, FirstName, LastName, Height, PhoneNumber FROM student";
 $result = mysqli_query($connect, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -20,6 +20,7 @@ if (mysqli_num_rows($result) > 0) {
             <th>First Name</th>
             <th>Last Name</th>
             <th>Height (cm)</th>
+            <th>Phone Number</th>
           </tr>";
 
     while ($row = mysqli_fetch_assoc($result)) {
@@ -28,6 +29,7 @@ if (mysqli_num_rows($result) > 0) {
                 <td>{$row['FirstName']}</td>
                 <td>{$row['LastName']}</td>
                 <td>{$row['Height']}</td>
+                <td>{$row['PhoneNumber']}</td>
               </tr>";
     }
 
