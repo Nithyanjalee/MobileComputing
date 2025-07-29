@@ -13,7 +13,7 @@ $sql = "SELECT StudentID, FirstName, LastName, Height, PhoneNumber FROM student"
 $result = mysqli_query($connect, $sql);
 
 if (mysqli_num_rows($result) > 0) {
-    echo "<h2>Student List</h2>";
+    echo "<h2>STUDENT LIST</h2>";
     echo "<table border='1' cellpadding='8' cellspacing='0'>";
     echo "<tr>
             <th>Student ID</th>
